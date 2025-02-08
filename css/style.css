@@ -1,0 +1,275 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+.pt-fixed{
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+}
+
+.bg-navbar{
+    background: #262626;
+
+}
+
+
+.font-size{
+    font-size: 25px;
+    border-bottom: 2px solid #7cf03d;
+}
+
+.hover-link li{
+    padding: 0 15px;
+}
+
+.hover-link li a{
+    font-size: 20px;
+    color: gray;
+}
+
+.nav-link.active {
+    color: #7cf03d !important; 
+    font-weight: bold;
+}
+
+.bg-picture{
+    background: url(../asset/img/Bg.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 50em;
+
+}
+
+
+.py-100{
+    padding: 15em 0 0 0;
+}
+
+.text-size{
+    font-size: 45px;
+
+}
+
+.img-width img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+
+.font-width{
+    width: 600px;
+}
+
+
+.btn-one a{
+    border: 2px solid white;
+    color: red;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    z-index: 2;
+}
+.btn-one a::after{
+    content: '';
+    width: 0;
+    height: 100%;
+    background: white;
+    top: 0;
+    left: -60px;
+    transform: skewX(35deg);
+    position: absolute;
+    transition: .5s;
+    z-index: -1;
+}
+
+.btn-one a:nth-child(2):after{
+    background: red;
+}
+.btn-one a:nth-child(2){
+    color: white;
+    border: 2px solid red;
+}
+
+.btn-one a:hover:after{
+    width: 100%;
+}
+.btn-one a:hover{
+    box-shadow: 0 0 10px 5px white;
+    transition: 1s;
+}
+.btn-one a:nth-child(2):hover{
+    box-shadow: 0 0 10px 5px red;
+    transition: 1s;
+}
+
+
+
+.welcome h3{
+    display: inline-block;
+    font-size:35px;
+    color: white;
+}
+
+.welcome h3 span{
+    position: relative;
+    display: inline-block;
+    color: transparent;
+    -webkit-text-stroke: .7px red;
+    animation: display-text 16s linear infinite; 
+    animation-delay: calc(-4s * var(--i));
+}
+ @keyframes display-text{
+    25%,100%{
+        display: none;
+    }
+ }
+
+.welcome h3 span::before{
+    content: attr(data-text);
+    position: absolute; 
+    width: 0;
+    border-right: 2px solid red;
+    color: red;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: fill-text 4s linear infinite;
+}
+
+
+@keyframes fill-text{
+    10%,100%{
+        width: 0;
+    }
+
+    70%,90%{
+        width: 100%;
+    }
+}
+
+
+.width-picture img{
+    margin-top: -150px;
+    width: 600px;
+    position: relative;
+    animation: pic-shoes 4s infinite ease-in-out normal;
+}
+
+@keyframes pic-shoes{
+    0%   {top: 0px;}
+    50%  {top: 25px;}
+    100%  {top: 0px;}
+}
+
+/* Modal */
+
+.bg-login{
+    background: rgb(255, 255, 255);
+}
+.icon-link i{
+    padding: 5px 5px;
+    margin: 0 5px;
+    border-radius: 50px;
+    font-size: 20px;
+    border: 1px solid;
+
+}
+
+.icon-link {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+/* About */
+.fs-p{
+    font-size: 20px;
+}
+
+ 
+.width-img-about{
+    border-radius: 30px;
+    width: 100%;
+}
+
+/* Contact */
+.bg-contact{
+    /* background: url(../asset/img/Bg.jpg); */
+    background: #262626;
+    background-position: center;
+    background-size: cover;
+    height: 35em;
+}
+
+.bb-green{
+    border: none;
+    border-bottom: 2px solid #7cf03d;
+}
+
+.pd-change:focus{
+    color: white;
+}
+
+.pd-change:valid{
+    color: white;
+}
+.pd-change::placeholder{
+    color: rgb(202, 191, 191);
+}
+  
+
+
+@media only screen and (max-width: 600px) {
+    .responsive-none{
+        display: none;
+    }
+
+    .py-100{
+        padding: 10em 0 0 0;
+    }
+    .welcome{
+        margin-left: 40px;
+    }
+
+    .welcome h2{
+        font-size:30px;
+    }
+    .welcome h3{
+        font-size:20px;
+    }
+
+    .welcome p{
+        font-size: 16px;
+        width: 20em;
+    }
+
+    .bg-picture{
+        height: 50em;
+    
+    }
+
+    .row-container{
+        padding: 0 50px;
+    }
+
+
+    /* about */
+    .fs-p{
+        font-size: 15px;
+    }
+
+    .width-img-about{
+        padding: 0 50px;
+    }
+
+    /* contact */
+
+    .contact-lt-none{
+        display: none;
+    }
+}
